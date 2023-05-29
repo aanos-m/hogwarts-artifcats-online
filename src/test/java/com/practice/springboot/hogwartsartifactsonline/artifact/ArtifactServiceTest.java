@@ -50,7 +50,7 @@ class ArtifactServiceTest {
         a.setId("1250808601744904192");
         a.setName("Invisibility Cloak");
         a.setDescription("An invisibility cloak is used to make the wearer invisible.");
-        a.setImageURL("ImageUrl");
+        a.setImageUrl("ImageUrl");
 
         Wizard w = new Wizard();
         w.setId(2);
@@ -65,7 +65,7 @@ class ArtifactServiceTest {
         assertThat(returnedArtifact.getId()).isEqualTo(a.getId());
         assertThat(returnedArtifact.getName()).isEqualTo(a.getName());
         assertThat(returnedArtifact.getDescription()).isEqualTo(a.getDescription());
-        assertThat(returnedArtifact.getImageURL()).isEqualTo(a.getImageURL());
+        assertThat(returnedArtifact.getImageUrl()).isEqualTo(a.getImageUrl());
 
         verify(artifactRepository, times(1)).findById("1250808601744904192");
     }
